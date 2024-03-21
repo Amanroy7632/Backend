@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "creating a mega project",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Aman Roy",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
