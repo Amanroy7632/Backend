@@ -4,3 +4,11 @@ const asyncHandler=(requestHandler)=>{
   }
 }
 export {asyncHandler}
+
+// const requestHandler = async (requestFunction)=>{
+//     try {
+//         await requestFunction(req,res,next);
+//     } catch (error) {
+//         next(error.code)
+//     }
+// }
