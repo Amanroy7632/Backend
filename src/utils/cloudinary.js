@@ -1,4 +1,5 @@
 import { v2 as cloudinary } from "cloudinary";
+import exp from "constants";
 import fs from "fs" //used for handling a file system by default in node js
           
 cloudinary.config({ 
@@ -6,7 +7,7 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_API_KEY, 
   api_secret: process.env.CLOUDINARY_API_SECRET 
 });
-const uploadCloudinary=async(localFilePath)=>{
+const uploadOnCloudinary=async(localFilePath)=>{
     try {
         if(!localFilePath) return null;
         // upload our file to cloudinary 
@@ -21,6 +22,7 @@ const uploadCloudinary=async(localFilePath)=>{
         return null;
     }
 }
-cloudinary.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
-  { public_id: "olympic_flag" }, 
-  function(error, result) {console.log(result); });
+// cloudinary.uploader.upload("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg",
+//   { public_id: "olympic_flag" }, 
+//   function(error, result) {console.log(result); });
+export {uploadOnCloudinary};
